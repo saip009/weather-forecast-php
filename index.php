@@ -66,7 +66,8 @@ $("#findWeather").click(function() {
 
 	} else {
 
-		alert("Please enter a City.");
+		$("#success").hide();
+		$("#fail").html("Please enter a City.").fadeIn();
 	}
 
 })
