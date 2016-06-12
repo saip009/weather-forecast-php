@@ -53,11 +53,14 @@ $("#findWeather").click(function() {
 
 		$.get("scraper.php?city="+$("#city").val(), function(data) {
 			
-			if(data != "")
+			if(data != "") {
+				$("#fail").hide();
 				$("#success").html(data).fadeIn();
-			// alert(data);
-			else 
+			}
+			else { 
+				$("#success").hide();
 				$("#fail").fadeIn();
+			}
 		
 		});
 
